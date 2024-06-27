@@ -105,20 +105,6 @@ The database schema consists of the following tables:
 | created_at | TIMESTAMP  | Timestamp of creation  |
 | updated_at | TIMESTAMP  | Timestamp of last update |
 
-## Models
-
-### Status Model
-
-The `Status` model represents the statuses of copies and borrow records.
-
-### Copy Model
-
-The `Copy` model represents the copies of books and their statuses.
-
-### BorrowRecord Model
-
-The `BorrowRecord` model represents the borrow transactions and their statuses.
-
 
 ## Main Endpoints
 
