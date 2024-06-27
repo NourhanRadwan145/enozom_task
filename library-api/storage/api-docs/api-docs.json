@@ -1,0 +1,102 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Library API",
+        "description": "API documentation for the Library system",
+        "contact": {
+            "name": "Nourhan",
+            "email": "nourhanradwan862@gmail.com"
+        },
+        "license": {
+            "name": "MIT License",
+            "url": "https://opensource.org/licenses/MIT"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/borrow-book": {
+            "post": {
+                "tags": [
+                    "Book"
+                ],
+                "summary": "Borrow a book",
+                "operationId": "94038bd8410b992efeb84c3e250bb465",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "student_id": {
+                                        "type": "integer"
+                                    },
+                                    "copy_id": {
+                                        "type": "integer"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Book borrowed successfully"
+                    },
+                    "400": {
+                        "description": "Failed to borrow book"
+                    }
+                }
+            }
+        },
+        "/api/return-book": {
+            "post": {
+                "tags": [
+                    "Book"
+                ],
+                "summary": "Return a book",
+                "operationId": "00d8bb474fa22e6328dfd8f50f35e871",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "copy_id": {
+                                        "type": "integer"
+                                    },
+                                    "return_status_id": {
+                                        "type": "integer"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Book returned successfully"
+                    },
+                    "400": {
+                        "description": "Failed to return book"
+                    }
+                }
+            }
+        },
+        "/api/generate-report": {
+            "get": {
+                "tags": [
+                    "Report"
+                ],
+                "summary": "Generate a report of all book copies and their statuses",
+                "operationId": "60af7a6e0b6c866b2809671d64132a33",
+                "responses": {
+                    "200": {
+                        "description": "Report generated successfully"
+                    }
+                }
+            }
+        }
+    }
+}
