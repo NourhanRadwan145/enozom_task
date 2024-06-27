@@ -47,6 +47,27 @@ This project is a Laravel-based library system that manages books, copies, stude
     php artisan migrate
     ```
 
+## Adding Swagger for API Documentation
+
+1. Install the Swagger package using Composer:
+    ```bash
+    composer require "darkaonline/l5-swagger"
+    ```
+
+2. Publish the Swagger configuration:
+    ```bash
+    php artisan vendor:publish --provider "L5Swagger\L5SwaggerServiceProvider"
+    ```
+
+3. Update the Swagger configuration in `config/l5-swagger.php` as needed.
+
+4. Generate the Swagger documentation:
+    ```bash
+    php artisan l5-swagger:generate
+    ```
+
+5. Access the Swagger UI at `http://127.0.0.1:8000/api/documentation`.
+
 ## Database Schema
 
 The database schema consists of the following tables:
